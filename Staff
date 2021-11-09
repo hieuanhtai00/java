@@ -1,0 +1,71 @@
+public class Staff {
+    String nameStaff;
+    String countryStaff;
+    String genderStaff;
+    int yearBirthday;
+    String addressStaff;
+
+    Staff() {
+    }
+
+    Staff(String nameStaff, String countryStaff, String genderStaff, int yearBirthday, String addressStaff) {
+        this.addressStaff = addressStaff;
+        this.nameStaff = nameStaff;
+        this.countryStaff = countryStaff;
+        this.genderStaff = genderStaff;
+        this.yearBirthday = yearBirthday;
+    }
+
+    public void setAddressStaff(String addressStaff) {
+        this.addressStaff = addressStaff;
+    }
+
+    public void setCountryStaff(String countryStaff) {
+        this.countryStaff = countryStaff;
+    }
+
+    public void setGenderStaff(String genderStaff) {
+        this.genderStaff = genderStaff;
+    }
+
+    public void setNameStaff(String nameStaff) {
+        this.nameStaff = nameStaff;
+    }
+
+    public void setYearBirthday(int yearBirthday) {
+        this.yearBirthday = yearBirthday;
+    }
+
+    public String getAddressStaff() {
+        return addressStaff;
+    }
+
+    public String getCountryStaff() {
+        return countryStaff;
+    }
+
+    public String getGenderStaff() {
+        return genderStaff;
+    }
+
+    public String getNameStaff() {
+        return nameStaff;
+    }
+
+    public int getAge() {
+        return 2021 - this.yearBirthday;
+    }
+
+    void ShowInformation() {
+        System.out.println("Name : " + nameStaff);
+        System.out.println("Country : " + countryStaff);
+        System.out.println("Gender : " + genderStaff);
+        System.out.println("Age : " + getAge());
+        System.out.println("Address : " + addressStaff);
+    }
+
+    public static void main(String[] args) {
+        Staff staff = new Staff("Nguyen Van Hieu", "VIETNAM", "Male", 2001, "HaNoi");
+        staff.ShowInformation();
+    }
+}

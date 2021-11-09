@@ -1,0 +1,42 @@
+public class Student extends Person {
+    protected String classStudent;
+    protected String ID_Student;
+
+    Student() {
+    }
+
+    Student(String nameStudent, int ageStudent, String classStudent, String ID_Student) {
+        super(nameStudent, ageStudent);
+        this.classStudent = classStudent;
+        this.ID_Student = ID_Student;
+    }
+
+    @Override
+    public void ShowInformation() {
+        super.ShowInformation();
+        System.out.print("\nClass : " + this.classStudent + "\nID : " + this.ID_Student);
+    }
+
+    public static void main(String[] args) {
+
+        Student firStudent = new Student("Nguyen Van Hieu", 21, "AT16", "AT160420");
+        firStudent.ShowInformation();
+    }
+}
+
+class Person {
+    protected String namePerson;
+    protected int agePerson;
+
+    Person() {
+    }
+
+    Person(String namePerson, int agePerson) {
+        this.agePerson = agePerson;
+        this.namePerson = namePerson;
+    }
+
+    void ShowInformation() {
+        System.out.print("Name : " + this.namePerson + "\nAge : " + this.agePerson);
+    }
+}

@@ -1,78 +1,61 @@
-import java.util.Scanner;
 
 public class hocsinh {
-    String mahocsinh;
-    double diem;
-    int age;
+    String hoten;
     String lop;
+    double toan, ly, hoa;
 
     hocsinh() {
     }
 
-    hocsinh(String mahocsinh, double diem, int age, String lop) {
-        this.mahocsinh = mahocsinh;
-        this.diem = diem;
-        this.age = age;
+    hocsinh(String hoten, String lop, double toan, double ly, double hoa) {
+        this.hoten = hoten;
         this.lop = lop;
+        this.toan = toan;
+        this.ly = ly;
+        this.hoa = hoa;
     }
 
-    public int getAge() {
-        return age;
+    public void setHoa(double hoa) {
+        this.hoa = hoa;
     }
 
-    public double getDiem() {
-        return diem;
-    }
-
-    public String getLop() {
-        return lop;
-    }
-
-    public String getMahocsinh() {
-        return mahocsinh;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public void setDiem(double diem) {
-        this.diem = diem;
+    public void setHoten(String hoten) {
+        this.hoten = hoten;
     }
 
     public void setLop(String lop) {
         this.lop = lop;
     }
 
-    public void setMahocsinh(String mahocsinh) {
-        this.mahocsinh = mahocsinh;
+    public void setLy(double ly) {
+        this.ly = ly;
     }
 
-    void inputInfor() {
-        Scanner scanner = new Scanner(System.in);
-        mahocsinh = scanner.nextLine();
-        diem = scanner.nextDouble();
-        age = scanner.nextInt();
-        lop = scanner.nextLine();
-        scanner.close();
+    public void setToan(double toan) {
+        this.toan = toan;
     }
 
-    void showInfor() {
-        System.out.println("mahocsinh : " + mahocsinh);
-        System.out.println("diem : " + diem);
-        System.out.println("tuoi : " + age);
-        System.out.println("lop : " + lop);
+    public double getHoa() {
+        return hoa;
     }
 
-    boolean hocbong() {
-        if (diem > 8)
-            return true;
-        return false;
+    public String getHoten() {
+        return hoten;
     }
 
-    public static void main(String[] args) {
-        hocsinh hs = new hocsinh();
-        hs.inputInfor();
-        hs.showInfor();
+    public String getLop() {
+        return lop;
+    }
+
+    public double getLy() {
+        return ly;
+    }
+
+    public double getToan() {
+        return toan;
+    }
+
+    double getAvg() {
+        return (toan + ly + hoa) / 3;
     }
 }
